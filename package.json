@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -t es2040 -g uglifyify index.js -o bundle.js",
-    "watch": "watchify -t es2040 index.js -o bundle.js -g uglifyify -dv"
+    "build": "browserify -g uglifyify index.js -o bundle.js",
+    "watch": "watchify index.js -o bundle.js -g uglifyify -dv"
+  },
+  "browserify": {
+    "transform": [
+      "es2040"
+    ]
   },
   "keywords": [],
   "author": "",
