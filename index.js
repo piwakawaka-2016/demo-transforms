@@ -1,9 +1,10 @@
+const spark = require('sparkly')
 
 
-function double (x)     {
+const arr = [1, 2, 13, 2, 0, 4, 7, 7, 8]
 
-  return 2*x
-   }
+const newArr = arr.map(x => x*2)
 
-console.log(double(213))   
+console.log('here is a graph', spark(newArr))
+console.log('here is the datas', newArr)
 
